@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GitHub Hosted Calendar</title>
+    
+    <!-- Tailwind CSS for modern, clean styling -->
+    <script src="https://jsdelivr.net"></script>
+    
+    <!-- FullCalendar CSS and JS via CDN JS -->
+    <script src="https://jsdelivr.net"></script>
+
+    <style>
+        /* Smooth transition for calendar loading */
+        .fc {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
+
+    <!-- Header Navigation Bar -->
+    <header class="bg-white border-b border-gray-200 py-4 px-6 sticky top-0 z-10 shadow-xs">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold tracking-tight text-gray-950 flex items-center gap-2">
+                📅 Team Schedule
+            </h1>
+            <span class="text-xs font-medium bg-green-100 text-green-800 px-2.5 py-1 rounded-full">
+                Live via GitHub
+            </span>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow p-4 md:p-8">
+        <div class="max-w-6xl mx-auto bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+            <!-- This empty div is where FullCalendar will inject the interactive schedule -->
+            <div id="calendar"></div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 text-xs text-gray-400 border-t border-gray-100 bg-white">
+        <p>Powered by GitHub Pages & FullCalendar</p>
+    </footer>
+
+    <!-- Link to your external JavaScript file that handles the calendar logic -->
+    <script src="calendar.js"></script>
+</body>
+</html>
+
